@@ -1,0 +1,79 @@
+
+<!doctype html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kế Toán Pro – Hành trình sự nghiệp</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#40335f;--muted:#81789a;--pink:#ff79ad;--purple:#9476f5;--mint:#77d9c3;--yellow:#ffd66e;--bg:#fff8fc;--line:#f0e5f2}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 5% 0%,#ffe4f0,transparent 32%),radial-gradient(circle at 100% 20%,#e8e2ff,transparent 30%),var(--bg);font-family:'Be Vietnam Pro',sans-serif;color:var(--ink);min-height:100vh}
+header{max-width:1050px;margin:auto;padding:20px 20px;display:flex;justify-content:space-between;align-items:center}.brand{font-weight:800;font-size:19px}.brand span{color:#a17cf2}.tag{background:white;border:1px solid var(--line);border-radius:30px;padding:8px 13px;font-size:11px;font-weight:800;color:#8a6be0}
+main{max-width:900px;margin:10px auto;padding:0 18px 50px}.hero{text-align:center;padding:20px 0 16px}.mascot{font-size:58px;filter:drop-shadow(0 8px 8px #b58fbc22)}h1{font-size:clamp(29px,5vw,43px);letter-spacing:-1.4px;margin:8px 0;color:#55427b}.hero p{color:var(--muted);margin:0}
+.card{background:#ffffffed;border:1px solid var(--line);border-radius:25px;padding:clamp(19px,4vw,31px);box-shadow:0 16px 50px #8d6a9c12;margin:17px 0}.grid{display:grid;grid-template-columns:1fr 1fr;gap:13px}.field label{display:block;font-size:13px;font-weight:800;margin-bottom:8px}.field input{width:100%;padding:14px;border:1.5px solid var(--line);border-radius:14px;font:inherit;outline:none;background:#fffaff;color:var(--ink)}.field input:focus{border-color:var(--purple)}
+button{border:0;border-radius:14px;padding:14px 17px;font:inherit;font-weight:800;cursor:pointer;transition:.16s}button:hover{transform:translateY(-2px);filter:brightness(1.02)}button:disabled{cursor:not-allowed;opacity:.6;transform:none}.primary{background:linear-gradient(110deg,var(--pink),var(--purple));color:white;box-shadow:0 7px 16px #bd8bdc30}.soft{background:#f3efff;color:#765bd0}.wide{width:100%;margin-top:16px}
+.muted{font-size:13px;color:var(--muted);line-height:1.6}.hidden{display:none!important}.roomhead{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}.code{font-size:30px;letter-spacing:5px;font-weight:800;color:#9468df;background:#f4edff;padding:10px 16px;border-radius:15px}.players{display:grid;grid-template-columns:repeat(auto-fill,minmax(145px,1fr));gap:8px;margin:15px 0}.player{padding:10px;background:#fff8fc;border:1px solid var(--line);border-radius:13px;font-size:12px;font-weight:700;overflow:hidden;text-overflow:ellipsis}.player small{display:block;color:var(--muted);font-weight:500;margin-top:3px}
+.progress{height:10px;background:#f2edf7;border-radius:30px;overflow:hidden;margin:12px 0 19px}.progress>div{height:100%;background:linear-gradient(90deg,var(--pink),var(--purple));border-radius:30px}
+.chip{display:inline-block;background:#e9fbf6;color:#328c79;padding:7px 11px;border-radius:30px;font-size:12px;font-weight:800}.roundrow{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}.question{font-size:22px;font-weight:800;line-height:1.4;margin:12px 0 7px}.detail{color:#706681;line-height:1.75}.answers{display:grid;grid-template-columns:1fr 1fr;gap:11px;margin-top:20px}.answer{background:#fff9fd;border:1.5px solid var(--line);text-align:left;color:var(--ink);min-height:66px}.answer:hover{border-color:var(--pink);background:#fff1f7}.feedback{padding:14px;border-radius:15px;margin-top:15px;line-height:1.6;font-size:14px}.good{background:#e7faf2;color:#24765e}.bad{background:#fff2e7;color:#9c5b25}
+.careerbar{background:#fff9e8;border:1px solid #f8e8b6;border-radius:17px;padding:13px 15px;margin-top:15px}.careerbar strong{color:#946d1c}.ranking{display:grid;gap:9px;margin:17px 0}.rank{display:flex;align-items:center;justify-content:space-between;gap:8px;background:#fff8fc;border:1px solid var(--line);border-radius:14px;padding:12px 14px;font-weight:800}.rank:first-child{background:#fff9e6;border-color:#f6e5a9}.rank small{display:block;color:var(--muted);font-weight:500;font-size:11px}.rankright{text-align:right;white-space:nowrap}.end{text-align:center}.end .mascot{font-size:66px}.foot{text-align:center;color:#a79bb5;font-size:11px;margin-top:23px}
+@media(max-width:600px){.grid,.answers{grid-template-columns:1fr}.question{font-size:19px}.card{border-radius:19px}.hero{padding-top:8px}}
+</style></head><body>
+<header><div class="brand">🌷 KẾ TOÁN <span>PRO</span></div><div class="tag">CAREER QUEST • 50 PLAYERS</div></header>
+<main>
+<section class="hero"><div class="mascot">🐰🧾</div><h1>Hành trình trở thành kế toán trưởng!</h1><p>Học nghề qua nhiệm vụ • Tích lũy kinh nghiệm • Thăng cấp cùng đồng đội</p></section>
+<section id="home" class="card">
+ <div class="grid">
+  <div class="field"><label>🌼 Tên nhân vật</label><input id="name" maxlength="20" placeholder="Ví dụ: Như Kế Toán"></div>
+  <div class="field"><label>🔑 Mã phòng (nếu có)</label><input id="code" maxlength="4" placeholder="VD: H8K2" style="text-transform:uppercase"></div>
+ </div>
+ <div class="grid" style="margin-top:14px"><button class="primary" id="create">✨ Tạo phòng mới</button><button class="soft" id="join">🚪 Vào phòng</button></div>
+ <p id="error" class="muted" style="color:#d34c79;margin-bottom:0"></p>
+ <div class="careerbar"><strong>🎯 Mục tiêu nghề nghiệp</strong><div class="muted">Thực tập sinh → Nhân viên → Kế toán viên chính → Kế toán tổng hợp → Kế toán trưởng → Giám đốc tài chính</div></div>
+</section>
+<section id="lobby" class="card hidden">
+ <div class="roomhead"><div><div class="muted">MÃ PHÒNG – CHIA SẺ VỚI BẠN BÈ</div><div class="code" id="roomCode">----</div></div><button class="soft" id="copy">📋 Sao chép mã</button></div>
+ <h2 style="margin:22px 0 4px">👩‍💻 Đội ngũ kế toán</h2><p class="muted">Tối đa 50 người trong một phòng. Chờ mọi người vào rồi chủ phòng bắt đầu nhé!</p>
+ <div id="players" class="players"></div><div id="hostControls"><button class="primary wide" id="start">🚀 Bắt đầu hành trình</button></div><p id="waiting" class="muted hidden">Đang chờ chủ phòng bắt đầu…</p>
+</section>
+<section id="playing" class="card hidden">
+ <div class="roundrow"><span class="chip" id="dept">📂 Bộ phận</span><span class="tag" id="round">NHIỆM VỤ 1/8</span></div>
+ <div class="progress"><div id="progress" style="width:12.5%"></div></div>
+ <div class="question" id="qtitle"></div><div class="detail" id="qdetail"></div>
+ <div class="answers" id="answers"></div><div id="feedback"></div>
+ <div class="careerbar"><strong>⭐ Kinh nghiệm của em</strong><div class="muted" id="myCareer">Thực tập sinh • 0 XP</div></div>
+ <p class="muted" id="answeredCount"></p>
+</section>
+<section id="results" class="card hidden">
+ <div class="mascot">🌟</div><h2>Kết quả nhiệm vụ</h2><p class="muted">Ai tích lũy nhiều điểm và kinh nghiệm nhất?</p><div class="ranking" id="scores"></div>
+ <div id="nextControls"><button class="primary wide" id="next">➡️ Nhận nhiệm vụ tiếp theo</button></div><p id="nextWait" class="muted hidden">Đang chờ chủ phòng chuyển nhiệm vụ…</p>
+</section>
+<section id="finished" class="card end hidden">
+ <div class="mascot">🎓🎉</div><h2>Hành trình hôm nay đã hoàn thành!</h2><p class="muted">Chúc mừng các kế toán viên! Kinh nghiệm đã được tổng kết trong bảng xếp hạng.</p><div class="ranking" id="finalScores"></div><button class="soft wide" onclick="location.reload()">🏠 Về trang chủ</button>
+</section>
+<div class="foot">Kế Toán Pro Career • Game học tập mô phỏng • Tối đa 50 người/phòng</div>
+</main>
+<script src="/socket.io/socket.io.js"></script><script>
+const socket=io();const $=id=>document.getElementById(id);let myId=null,isHost=false,room=null,answered=false,myXp=0;
+const levels=[{min:0,title:"Thực tập sinh",emoji:"🌱"},{min:200,title:"Nhân viên kế toán",emoji:"🧾"},{min:400,title:"Kế toán viên chính",emoji:"📚"},{min:600,title:"Kế toán tổng hợp",emoji:"🧮"},{min:800,title:"Kế toán trưởng",emoji:"👩‍💼"},{min:1000,title:"Giám đốc tài chính",emoji:"🏆"}];
+function career(xp){return [...levels].reverse().find(x=>xp>=x.min)||levels[0]}
+function show(id){["home","lobby","playing","results","finished"].forEach(x=>$(x).classList.toggle("hidden",x!==id))}
+function error(t){$("error").textContent=t||""}
+function name(){return $("name").value.trim()||"Kế toán viên"}
+$("create").onclick=()=>{error("");socket.emit("room:create",{name:name()})};
+$("join").onclick=()=>{error("");socket.emit("room:join",{name:name(),code:$("code").value.trim().toUpperCase()})};
+socket.on("connect",()=>myId=socket.id);socket.on("game:error",error);
+socket.on("room:joined",r=>{room=r;isHost=r.hostId===myId;show("lobby");$("roomCode").textContent=r.code});
+$("copy").onclick=async()=>{try{await navigator.clipboard.writeText(room.code);$("copy").textContent="Đã sao chép ✓"}catch(e){$("copy").textContent="Mã: "+room.code}};
+$("start").onclick=()=>socket.emit("game:start");$("next").onclick=()=>socket.emit("game:next");
+socket.on("room:update",r=>{
+ room=r;isHost=r.hostId===myId;
+ if(r.status==="lobby"){show("lobby");$("roomCode").textContent=r.code;$("players").innerHTML=r.players.map(p=>`<div class="player">🌼 ${esc(p.name)}${p.id===r.hostId?"<small>👑 Chủ phòng</small>":""}</div>`).join("");$("hostControls").classList.toggle("hidden",!isHost);$("waiting").classList.toggle("hidden",isHost)}
+ if(r.status==="playing"){show("playing");$("dept").textContent="📂 "+r.mission.dept;$("round").textContent=`NHIỆM VỤ ${r.round}/${r.totalRounds}`;$("progress").style.width=(r.round/r.totalRounds*100)+"%";$("qtitle").textContent=r.mission.title;$("qdetail").textContent=r.mission.detail;$("answeredCount").textContent=`👥 ${r.players.filter(p=>p.answered).length}/${r.players.length} người đã hoàn thành`;
+  const me=r.players.find(p=>p.id===myId);if(me){myXp=me.xp;const c=career(myXp);$("myCareer").textContent=`${c.emoji} ${c.title} • ${myXp} XP`;}
+  if(!answered){$("feedback").innerHTML="";$("answers").innerHTML=r.mission.opts.map((o,i)=>`<button class="answer" data-i="${i}">${["A","B","C","D"][i]}. ${esc(o)}</button>`).join("");document.querySelectorAll(".answer").forEach(b=>b.onclick=()=>submit(+b.dataset.i))}
+ }
+ if(r.status==="results"){show("results");render("scores",r.results);$("nextControls").classList.toggle("hidden",!isHost);$("nextWait").classList.toggle("hidden",isHost);answered=false}
+ if(r.status==="finished"){show("finished");render("finalScores",r.results||[])}
+});
+function submit(i){if(answered)return;answered=true;document.querySelectorAll(".answer").forEach(b=>b.disabled=true);socket.emit("answer:submit",{answer:i})}
+socket.on("answer:feedback",d=>{$("feedback").innerHTML=`<div class="feedback ${d.correct?"good":"bad"}"><b>${d.correct?"Chính xác! +100 điểm, +"+d.earned+" XP 🌟":"Chưa chính xác, cố gắng ở nhiệm vụ sau nhé!"}</b><br>${esc(d.why)}</div>`});
+function render(id,rows){$(id).innerHTML=(rows||[]).map((p,i)=>{const c=p.career||career(p.xp||0);return `<div class="rank"><span>${["🥇","🥈","🥉"][i]||" "+(i+1)+"."} ${esc(p.name)}<small>${c.emoji} ${c.title} • ${p.xp||0} XP</small></span><span class="rankright">${p.score||0}<small>điểm</small></span></div>`}).join("")||"<p class='muted'>Chưa có kết quả.</p>"}
+function esc(s){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+</script></body></html>
